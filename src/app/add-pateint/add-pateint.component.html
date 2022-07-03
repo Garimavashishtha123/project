@@ -1,0 +1,139 @@
+
+<div class="heading">
+<h1 class="form-text text-center">Booking Appointment</h1><br>
+</div>
+<div id="full">
+<div class="left">
+<div class="class1">
+
+ 
+ <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+        <form>
+
+            <div class="form-group">
+                <label for="id">Id:</label>
+                <input  type="text"  class="form-control" formcontrolname="id" placeholder="Fullname">
+            </div>    
+
+        <div class="form-group">
+            <label for="name">Fullname:</label>
+            <input  type="text"  class="form-control" formcontrolname="name" placeholder="Fullname">
+        </div>
+
+         <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input  type="text"  class="form-control" formcontrolname="phone" placeholder="Phone">
+        </div> 
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text"  class="form-control" formcontrolname="email" placeholder="Email">
+        </div>
+        
+         <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input  type="date"  class="form-control" formcontrolname="dob" placeholder="Age">
+        </div>
+
+        <!-- <mat-form-field appearance="fill">
+            <input matInput [matDatepicker]="dob" [min]="minDate" [max]="maxDate" formControlName="dateOfBirth">
+            ------
+          </mat-form-field>  -->
+ 
+          <div class="form-group">
+            <label for="appdate">Appointmentdate:</label>
+            <input type="date"  class="form-control" formcontrolname="appdate" placeholder="">
+        </div> 
+
+         <div class="form-group">
+            <label for="apptime">Appointmenttime:</label>
+            <input type="time"  class="form-control" formcontrolname="apptime" placeholder="">
+        </div>
+  
+        <div class="form-group">
+            <label for="dname">DoctorName:</label>
+            <input type="text"  class="form-control" formcontrolname="dname" placeholder="">
+        </div>
+           
+            <!-- <div class="dropdown"><button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div></div>
+             -->
+            
+      
+        <!-- <div class="dropdown-menu">
+            <label for="Doctor">Doctors:</label>
+            <a class="dropdown-item" href="#">Action</a>
+           
+          </div>
+          -->
+       
+        <button type="submit" class="btn btn-primary" click="savedata()" >Book Appointment</button>
+
+        </form>
+    </div>  
+</div>
+</div>
+</div>
+
+<div>
+    <div *ngFor="let db of patient">
+        <p>
+            ID:{{db.id}}
+        </p>
+        <p>
+            Name:{{db.name}}
+        </p>
+        <p>
+            phone:{{db.phone}}
+        </p>
+        <p>
+            email:{{db.email}}
+        </p>
+        <p>
+            appdate:{{db.appdate}}
+        </p>
+        <p>
+            apptime:{{db.apptime}}
+        </p>
+        <p>
+            dname:{{db.dname}}
+        </p>
+
+        <button type="submit" class="btn btn-warning" click="delete()" >Delete</button>
+
+    </div>
+</div>
+
+<div class="right">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Slote Timing</th>
+            </tr>
+            <tr>
+            <th>Morning slote</th>
+            <td>10:00</td>
+            <td>11:00</td>
+            <td>12:00</td>
+            </tr><tr>
+            <th>After Noon</th>
+            <td>2:00</td>
+            <td>3:00</td>
+            <td>4:00</td>
+            </tr>
+            <tr>
+            <th>Evening </th>
+            <td>6:30</td>
+            <td>8:00</td>
+            <td>8:30:00</td>
+            </tr>
+
+            </thead>
+            </table>
+
+</div>
+
+</div>
